@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\PedidosController;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\UsersController;
 use App\Models\Categoria;
 use Illuminate\Support\Facades\Route;
 
@@ -31,3 +32,5 @@ Route::get('/admin/productos',[ProductosController::class,'index'])->name('admin
 
 //Pedidos
 Route::get('/admin/pedidos',[PedidosController::class,'index'])->name('admin.pedidos');
+//usuarios
+Route::get('/admin/users',[UsersController::class,'index'])->name('admin.users');

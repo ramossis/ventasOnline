@@ -4,7 +4,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">LISTADO PEDIDOS</h1>
+          <h1 class="m-0">LISTADO USUARIOS REGISTRADOS </h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -25,7 +25,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Listado y Gestion de Pedidos Actuales</h3>
+              <h3 class="card-title">Listado y Gestion de Usuarios</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -33,29 +33,23 @@
                 <thead>
                 <tr>
                   <th>Nro</th>
-                  <th>Pedido Por:</th>
-                  <th>Provincia</th>
-                  <th>Localidad</th>
-                  <th>Direccion</th>
-                  <th>Coste</th>
-                  <th>Estado</th>
-                  <th>Fecha Pedido</th>
-                  <th>Hora Pedido</th>
+                  <th>Nombre</th>
+                  <th>Apellidos</th>
+                  <th>Email</th>
+                  <th>Rol</th>
+                  <th>Imagen Perfil</th>
                   <th>Opciones</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach ($pedido as $ped )
+                @foreach ($user as $us )
                 <tr>
-                    <td>{{ $ped->id }}</td>
-                    <td>{{ $ped->user->nombre }}</td>
-                    <td>{{ $ped->provincia }}</td>
-                    <td>{{ $ped->localidad}}</td>
-                    <td>{{ $ped->direccion}}</td>
-                    <td>{{ $ped->coste}}Bs</td>
-                    <td>{{ $ped->estado}}</td>
-                    <td>{{ $ped->fecha }}</td>
-                    <td>{{ $ped->hora }}</td>
+                    <td>{{ $us->id }}</td>
+                    <td>{{ $us->nombre }}</td>
+                    <td>{{ $us->apellidos }}</td>
+                    <td>{{ $us->email}}</td>
+                    <td>{{ $us->rol}}</td>
+                    <td>{{ $us->image}}</td>
                     <td>
                         <button class="btn btn-warning">Editar</button>
                         <button class="btn btn-danger">Eliminar</button>

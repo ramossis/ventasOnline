@@ -25,7 +25,8 @@ class PedidosController extends Controller
      */
     public function create()
     {
-        //
+        $pedido=Pedido::all();
+        return view('admin.pedidos.create',compact($pedido));
     }
 
     /**

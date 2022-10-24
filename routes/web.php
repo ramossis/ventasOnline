@@ -26,11 +26,13 @@ Route::get('/admin',function(){
 });
 //Categorias
 Route::get('/admin/categorias',[CategoriasController::class,'index'])->name('admin.categorias');
+Route::get('/admin/categorias/create',[CategoriasController::class,'create'])->name('admin.categorias.create');
 
 //Productos
 Route::get('/admin/productos',[ProductosController::class,'index'])->name('admin.productos');
 
 //Pedidos
 Route::get('/admin/pedidos',[PedidosController::class,'index'])->name('admin.pedidos');
+Route::get('/admin/pedidos/create',[PedidosController::class,'create'])->name('admin.pedidos.create');
 //usuarios
 Route::get('/admin/users',[UsersController::class,'index'])->name('admin.users');
